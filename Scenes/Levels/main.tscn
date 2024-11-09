@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvwq418lqmd6h"]
+[gd_scene load_steps=15 format=3 uid="uid://bvwq418lqmd6h"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Main.cs" id="1_8kd5u"]
 [ext_resource type="PackedScene" uid="uid://dmw5ocbhhlu6a" path="res://Scenes/Characters/Player/player.tscn" id="2_tcgwe"]
@@ -14,6 +14,55 @@ size = Vector3(1.91394, 7.49008, 4.93445)
 [sub_resource type="BoxShape3D" id="BoxShape3D_jwf5k"]
 size = Vector3(1.91394, 7.49008, 4.93445)
 
+[sub_resource type="Curve3D" id="Curve3D_ctxlr"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.526093, 1.16825e-05, -0.425473, 0, 0, 0, 0, 0, 0, 0.58532, 1.16825e-05, -2.85781, 0, 0, 0, 0, 0, 0, 5.28436, 1.16825e-05, -3.01673, 0, 0, 0, 0, 0, 0, 3.61513, 1.16825e-05, 1.42957, 0, 0, 0, 0, 0, 0, 2.42436, 1.16825e-05, 2.68853, 0, 0, 0, 0, 0, 0, -0.15184, 1.16825e-05, 1.8315, 0, 0, 0, 0, 0, 0, -0.526093, 1.16825e-05, -0.425473),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[sub_resource type="Curve3D" id="Curve3D_10wjr"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -1.15234, -4.1008e-05, -0.381264, 0, 0, 0, 0, 0, 0, 1.4826, -4.1008e-05, -1.91751, 0, 0, 0, 0, 0, 0, 3.18414, -4.1008e-05, 0.0368271, 0, 0, 0, 0, 0, 0, 5.9552, -4.1008e-05, -0.527109, 0, 0, 0, 0, 0, 0, 5.54684, -4.1008e-05, 3.10931, 0, 0, 0, 0, 0, 0, 2.53269, -4.1008e-05, 2.98291, 0, 0, 0, 0, 0, 0, -0.426712, -4.1008e-05, 4.48458, 0, 0, 0, 0, 0, 0, -1.05871, -4.1008e-05, 1.2857, 0, 0, 0, 0, 0, 0, -1.15234, -4.1008e-05, -0.381264),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 9
+
+[sub_resource type="Curve3D" id="Curve3D_ajnwh"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4.35668, 0, -1.39018, 0, 0, 0, 0, 0, 0, 8.69993, 0, -2.46074, 0, 0, 0, 0, 0, 0, 8.97282, 0, 5.22209, 0, 0, 0, 0, 0, 0, 1.62885, 0, 9.76879, 0, 0, 0, 0, 0, 0, -5.78109, 0, 6.85099, 0, 0, 0, 0, 0, 0, -4.35668, 0, -1.39018),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
+[sub_resource type="Curve3D" id="Curve3D_hbags"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -3.87716, 0, 2.19656, 0, 0, 0, 0, 0, 0, 2.92065, 0, -2.42595, 0, 0, 0, 0, 0, 0, 5.86637, 0, 3.42017, 0, 0, 0, 0, 0, 0, -1.15804, 0, 6.59248, 0, 0, 0, 0, 0, 0, -3.87716, 0, 2.19656),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_dmq3m"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -3.83185, 0, 2.01967, 0, 0, 0, 0, 0, 0, 1.96895, 0, -2.78412, 0, 0, 0, 0, 0, 0, 5.14127, 0, 3.60583, 0, 0, 0, 0, 0, 0, -1.56591, 0, 6.05304, 0, 0, 0, 0, 0, 0, -3.83185, 0, 2.01967),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_jrf6g"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -5.02434, 0, 0.54277, 0, 0, 0, 0, 0, 0, 3.81281, 0, -6.84419, 0, 0, 0, 0, 0, 0, 7.21172, 0, 2.94466, 0, 0, 0, 0, 0, 0, -5.84008, 0, 10.1957, 0, 0, 0, 0, 0, 0, -5.02434, 0, 0.54277),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_sou07"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -5.11483, 0, 0.861945, 0, 0, 0, 0, 0, 0, 3.67701, 0, -4.71226, 0, 0, 0, 0, 0, 0, 8.43547, 0, 2.31214, 0, 0, 0, 0, 0, 0, 8.29952, 0, 10.1523, 0, 0, 0, 0, 0, 0, -1.35337, 0, 7.38784, 0, 0, 0, 0, 0, 0, -5.11483, 0, 0.861945),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
 [node name="Main" type="Node3D"]
 script = ExtResource("1_8kd5u")
 
@@ -25,6 +74,27 @@ transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 
 
 [node name="Enemy" parent="." instance=ExtResource("4_xau4h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4399, 1.78212, 0)
+
+[node name="InvisibleWall" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0801, 1.79727, 1.71718)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InvisibleWall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.680573, -0.191833)
+shape = SubResource("BoxShape3D_lm7hf")
+
+[node name="InvisibleWall2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.6228, 1.95727, -10.7889)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InvisibleWall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.140686, 3.24504, -1.96722)
+shape = SubResource("BoxShape3D_ce3am")
+
+[node name="InvisibleWall3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.6985, 1.95727, -10.7889)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InvisibleWall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.140686, 3.24504, -1.96722)
+shape = SubResource("BoxShape3D_jwf5k")
 
 [node name="Enviornment" type="Node3D" parent="."]
 
@@ -43,23 +113,32 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
-[node name="InvisibleWall" type="StaticBody3D" parent="Enviornment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0801, 1.79727, 1.71718)
+[node name="Enemies" type="Node3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Enviornment/InvisibleWall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.680573, -0.191833)
-shape = SubResource("BoxShape3D_lm7hf")
+[node name="Path3D" type="Path3D" parent="Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0631, 1.21539, -1.01843)
+curve = SubResource("Curve3D_ctxlr")
 
-[node name="InvisibleWall2" type="StaticBody3D" parent="Enviornment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.6228, 1.95727, -10.7889)
+[node name="Path3D2" type="Path3D" parent="Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.1968, 1.16615, -3.23882)
+curve = SubResource("Curve3D_10wjr")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Enviornment/InvisibleWall2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.140686, 3.24504, -1.96722)
-shape = SubResource("BoxShape3D_ce3am")
+[node name="Path3D3" type="Path3D" parent="Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7987, 5.27223, -46.2896)
+curve = SubResource("Curve3D_ajnwh")
 
-[node name="InvisibleWall3" type="StaticBody3D" parent="Enviornment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.6985, 1.95727, -10.7889)
+[node name="Path3D4" type="Path3D" parent="Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8735, 5.12959, -24.4224)
+curve = SubResource("Curve3D_hbags")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Enviornment/InvisibleWall3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.140686, 3.24504, -1.96722)
-shape = SubResource("BoxShape3D_jwf5k")
+[node name="Path3D5" type="Path3D" parent="Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.5902, 5.12238, -24.6987)
+curve = SubResource("Curve3D_dmq3m")
+
+[node name="Path3D6" type="Path3D" parent="Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.1429, 5.26601, -36.1334)
+curve = SubResource("Curve3D_jrf6g")
+
+[node name="Path3D7" type="Path3D" parent="Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.2561, 1.2975, -15.7709)
+curve = SubResource("Curve3D_sou07")
