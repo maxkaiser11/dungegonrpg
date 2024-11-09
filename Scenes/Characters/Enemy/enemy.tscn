@@ -1,6 +1,7 @@
-[gd_scene load_steps=109 format=3 uid="uid://c3wjkl63c1lqa"]
+[gd_scene load_steps=112 format=3 uid="uid://c3wjkl63c1lqa"]
 
 [ext_resource type="Texture2D" uid="uid://dexpjtvbkxmb1" path="res://Assets/Sprites/Characters/Enemy Knight/Idle/0_Demons_of_Darkness_Idle_001.png" id="1_6pawv"]
+[ext_resource type="Script" path="res://Scripts/Characters/Enemy/Enemy.cs" id="1_i3xa3"]
 [ext_resource type="Texture2D" uid="uid://dcqcx80b2qxl3" path="res://Assets/Sprites/Characters/Enemy Knight/Idle/0_Demons_of_Darkness_Idle_000.png" id="2_kblhe"]
 [ext_resource type="Texture2D" uid="uid://jlpjb6mpxrjk" path="res://Assets/Sprites/Characters/Enemy Knight/Idle/0_Demons_of_Darkness_Idle_002.png" id="3_7ngd4"]
 [ext_resource type="Texture2D" uid="uid://nakjosegct30" path="res://Assets/Sprites/Characters/Enemy Knight/Idle/0_Demons_of_Darkness_Idle_003.png" id="4_e11qc"]
@@ -99,23 +100,8 @@
 [ext_resource type="Texture2D" uid="uid://bkn7fvxgsf55j" path="res://Assets/Sprites/Characters/Enemy Knight/TakeHit/0_Demons_of_Darkness_Hurt_009.png" id="97_k2pvx"]
 [ext_resource type="Texture2D" uid="uid://d0sw741do4nwv" path="res://Assets/Sprites/Characters/Enemy Knight/TakeHit/0_Demons_of_Darkness_Hurt_010.png" id="98_hxmua"]
 [ext_resource type="Texture2D" uid="uid://cje0gsx488bwa" path="res://Assets/Sprites/Characters/Enemy Knight/TakeHit/0_Demons_of_Darkness_Hurt_011.png" id="99_harwf"]
-
-[sub_resource type="Animation" id="Animation_iwevt"]
-resource_name = "idle"
-loop_mode = 1
-step = 0.0555556
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite3D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0555556, 0.111111, 0.166667, 0.222222, 0.277778, 0.333333, 0.388889, 0.444444, 0.5, 0.555556, 0.611111, 0.666667, 0.722222, 0.777778, 0.833333, 0.888889, 0.944444),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("2_kblhe"), ExtResource("1_6pawv"), ExtResource("3_7ngd4"), ExtResource("4_e11qc"), ExtResource("5_3wmlg"), ExtResource("6_r7nhu"), ExtResource("7_vp62u"), ExtResource("8_o4fgp"), ExtResource("9_2qyr4"), ExtResource("10_02wol"), ExtResource("11_h8wnv"), ExtResource("12_klvly"), ExtResource("13_pcrwe"), ExtResource("14_e2c6q"), ExtResource("15_sr7o4"), ExtResource("16_l10v2"), ExtResource("17_ey0tp"), ExtResource("18_8l0ue")]
-}
+[ext_resource type="PackedScene" uid="uid://q1ajk7ao2hu0" path="res://Scenes/Characters/state_machine.tscn" id="100_a757d"]
+[ext_resource type="Script" path="res://Scripts/Characters/Enemy/EnemyIdleState.cs" id="101_wlhc0"]
 
 [sub_resource type="Animation" id="Animation_4sijw"]
 length = 0.001
@@ -224,20 +210,41 @@ tracks/0/keys = {
 "values": [ExtResource("88_gdpc5"), ExtResource("89_268n1"), ExtResource("90_p8ag0"), ExtResource("91_68ovn"), ExtResource("92_8svu3"), ExtResource("93_nyqmb"), ExtResource("94_wxe85"), ExtResource("95_5u06n"), ExtResource("96_ojxku"), ExtResource("97_k2pvx"), ExtResource("98_hxmua"), ExtResource("99_harwf")]
 }
 
+[sub_resource type="Animation" id="Animation_iwevt"]
+resource_name = "Idle"
+loop_mode = 1
+step = 0.0555556
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0555556, 0.111111, 0.166667, 0.222222, 0.277778, 0.333333, 0.388889, 0.444444, 0.5, 0.555556, 0.611111, 0.666667, 0.722222, 0.777778, 0.833333, 0.888889, 0.944444),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_kblhe"), ExtResource("1_6pawv"), ExtResource("3_7ngd4"), ExtResource("4_e11qc"), ExtResource("5_3wmlg"), ExtResource("6_r7nhu"), ExtResource("7_vp62u"), ExtResource("8_o4fgp"), ExtResource("9_2qyr4"), ExtResource("10_02wol"), ExtResource("11_h8wnv"), ExtResource("12_klvly"), ExtResource("13_pcrwe"), ExtResource("14_e2c6q"), ExtResource("15_sr7o4"), ExtResource("16_l10v2"), ExtResource("17_ey0tp"), ExtResource("18_8l0ue")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1pxd6"]
 _data = {
 "Attack": SubResource("Animation_0wo0i"),
 "Death": SubResource("Animation_2v7jb"),
+"Idle": SubResource("Animation_iwevt"),
 "Move": SubResource("Animation_bdrhq"),
 "RESET": SubResource("Animation_4sijw"),
 "TakeHit": SubResource("Animation_k1bnk"),
-"Walking": SubResource("Animation_oj8w6"),
-"idle": SubResource("Animation_iwevt")
+"Walking": SubResource("Animation_oj8w6")
 }
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gmvrf"]
 
-[node name="Enemy" type="CharacterBody3D"]
+[node name="Enemy" type="CharacterBody3D" node_paths=PackedStringArray("AnimPlayerNode", "SpriteNode", "StateMachineNode")]
+script = ExtResource("1_i3xa3")
+AnimPlayerNode = NodePath("AnimationPlayer")
+SpriteNode = NodePath("Sprite3D")
+StateMachineNode = NodePath("StateMachine")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 pixel_size = 0.0025
@@ -251,3 +258,10 @@ libraries = {
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22541, 0)
 shape = SubResource("CapsuleShape3D_gmvrf")
+
+[node name="StateMachine" parent="." node_paths=PackedStringArray("currentState", "states") instance=ExtResource("100_a757d")]
+currentState = NodePath("IdleState")
+states = [NodePath("IdleState")]
+
+[node name="IdleState" type="Node" parent="StateMachine"]
+script = ExtResource("101_wlhc0")
